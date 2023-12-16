@@ -30,13 +30,13 @@ export class HighlightDirective {
     const selectedText = this.getSelectedText();
     if (selectedText) {
       const annotation: Annotation = {
-        start: 0, // You need to set the start and end positions accordingly
+        start: 0, // 
         end: selectedText.length,
-        label: this.labels[0], // Assuming only one label is selected for simplicity
+        label: this.labels[0], 
         text: selectedText
       };
 
-      this.sendToBackend.emit(annotation); // Emit the event with the annotation data
+      this.sendToBackend.emit(annotation); 
     }
   }
 
