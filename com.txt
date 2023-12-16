@@ -1,0 +1,6 @@
+user
+dataplore0@gmail.com
+chaabeni1.
+
+----------
+launch the server : py manage.py runserver
