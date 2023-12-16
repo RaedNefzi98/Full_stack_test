@@ -38,7 +38,7 @@ export class AppComponent {
 
 
   onSendToBackend(annotation: Annotation) {
-    // You can perform additional logic here if needed
+    
     this.pipelineService.sendAnnotation(this.annotation).subscribe(
       response => {
         console.log('Annotation sent successfully:', response);
@@ -64,13 +64,13 @@ export class AppComponent {
       this.pipelineService.makeApiCall(this.formData)
         .subscribe(
           (response: any) => {
-            // Handle the response from Django
+            
             console.log(response);
-            // Extract and store scores
+            
           this.scores = response.scores;
           },
           (error: any) => {
-            // Handle errors
+            
             console.error('Error:', error);
           }
         );
