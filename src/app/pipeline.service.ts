@@ -35,7 +35,7 @@ export class PipelineService {
   makeApiCall(requestData: Item): Observable<any> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json'
-      // Add any other headers as needed
+      
     });
 
     const apiUrl = `${this.backendUrl}/pipeline_api/`; 
