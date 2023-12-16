@@ -36,14 +36,14 @@ def clean_text(text):
 
 
 
-@csrf_exempt  # Disabling CSRF protection for simplicity. 
+@csrf_exempt  #
 def pipeline_api(request):
     if request.method == 'POST':
         try:
-           # Get JSON data from the request body
+           
             data = json.loads(request.body.decode('utf-8'))
 
-            # Extract 'text' from the JSON data
+            
             raw_text = data.get('text', '')
 
             # Clean the text
@@ -52,7 +52,7 @@ def pipeline_api(request):
             # Extract 'candidate_labels' from the JSON data
             candidate_labels = data.get('candidate_labels', [])
 
-            # Create the pipeline
+           
             pipe = pipeline(model="facebook/bart-large-mnli")
 
             # Run the pipeline with the cleaned text and provided labels
@@ -63,7 +63,7 @@ def pipeline_api(request):
             return JsonResponse(output, safe=False)
 
         except Exception as e:
-            # Handle exceptions appropriately
+            
             return JsonResponse({'error': str(e)}, status=500)
 
     else:
@@ -78,7 +78,7 @@ def export_annotations(request):
         label = request.POST.get('label')
         text = request.POST.get('text')
 
-        # Process the data as needed
+        
         data = [{
             'start': start,
             'end': end,
