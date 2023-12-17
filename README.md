@@ -54,7 +54,7 @@ https://www.youtube.com/watch?v=nWZs1G1igDo
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/annotation-tool.git
+   git clone https://github.com/RaedNefzi98/Full_stack_test.git
 
 2. **Go to the back Branch and fork it**
 
